@@ -7,12 +7,8 @@ document.getElementById('weather-form').addEventListener('submit', function(even
 
 let isCelsius = true;
 
-function toggleTemperature() {
-    isCelsius = !isCelsius;
-    document.getElementById('toggle-temp').innerText = isCelsius ? "Switch to °F" : "Switch to °C";
-    fetchWeather(); 
-}
-window.toggleTemperature = toggleTemperature;
+
+// window.toggleTemperature = toggleTemperature;
 
 
 function fetchWeather() {
@@ -62,5 +58,18 @@ function fetchWeather() {
             console.error('Error fetching weather data:', error);
         });
 }
-console.log(isCelsius)
 
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+}
+// window.toggleTheme = toggleTheme;
+
+
+function toggleTemperature() {
+    isCelsius = !isCelsius;
+    document.getElementById('toggle-temp').innerText = isCelsius ? "Switch to °F" : "Switch to °C";
+    fetchWeather(); 
+}
+document.getElementById('toggle-temp').addEventListener('click', toggleTemperature);
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
