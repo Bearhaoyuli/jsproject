@@ -8,10 +8,12 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    transition: all 0.5s ease;
 }
 
 h1 {
     color: #333;
+    transition: all 0.5s ease;
 }
 
 form {
@@ -95,4 +97,7 @@ body.dark-mode #clothing-recommendation {
 body.dark-mode button {
     background-color: #FFF;
     color: #333;
+}
+body.dark-mode h1 {
+    color: #ffffff; /* White color */
 }
