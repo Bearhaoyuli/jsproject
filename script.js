@@ -70,3 +70,16 @@ const toggleTemperature = () => {
 
 document.getElementById('toggle-temp').addEventListener('click', toggleTemperature);
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+document.getElementById('reset-button').addEventListener('click', () => {
+    document.getElementById('weather-form').reset();
+    
+    document.getElementById('weather-info').innerHTML = "";
+    document.getElementById('clothing-recommendation').innerHTML = "";
+    
+    document.body.classList.remove('dark-mode');
+    
+    isCelsius = true;
+    document.getElementById('toggle-temp').innerText = "Switch to °F";
+
+});
